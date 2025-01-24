@@ -36,7 +36,7 @@
                 <a class="nav-link text-secondary" href="./home.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-secondary" href="#">Product</a>
+                <a class="nav-link text-secondary" href="./details.html">Details</a>
               </li>
             </ul>
           </div>
@@ -75,7 +75,8 @@
             </div>
             <div class="container d-flex justify-content-between mt-5">
                 <button type="submit"  id="submit-btn" class="btn btn-outline-primary">Submit</button>
-                <button type="reset" id="delete-btn" class="btn btn-outline-danger"> Delete</button>
+                <button type="reset" const confirmDelete = confirm("sicuro che vuoi eliminare?"); class="btn btn-outline-light"> Reset form</button>
+                <button type="button" id="delete-btn" class="btn btn-outline-danger"> Delete</button>
             </div>
           </form>
         </div>

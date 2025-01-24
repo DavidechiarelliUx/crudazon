@@ -10,6 +10,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
   <body class="bg-dark text-light">
     <header>
@@ -33,10 +34,10 @@
                 <a class="nav-link text-secondary" href="./index.html">Back-office</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active text-light" aria-current="page" href="./home.html">Home</a>
+                <a class="nav-link text-secondary" href="./home.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-secondary" href="./details.html">Details</a>
+                <a class="nav-link text-secondary active" aria-current="page" href="./details.html">Details</a>
               </li>
             </ul>
           </div>
@@ -44,21 +45,20 @@
       </nav>
     </header>
     <main>
-      <section>
-        <div class="container">
-          <h1 class="text-center">Product</h1>
-          <div class="row" id="row">
-
-          </div>
-          </div>
-        </div>
-      </section>
+        <section>
+            <button type="button" class="border border-0 bg-dark"><i class="bi bi-arrow-left-square bg-dark text-light fs-2" id="arrow-back"></i></button>
+            <div class="container">
+                <div class="row" id="row">
+                    
+                </div>
+            </div>
+        </section>
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="./home.js"></script>
+    <script src="./details.js"></script>
   </body>
 </html>

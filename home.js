@@ -28,11 +28,11 @@ fetch(URL, {
         const card=document.createElement("div");
         const imageProduct=document.createElement("img");
         const cardBody=document.createElement("div");
-        const nameProduct=document.createElement("h3");
+        const nameProduct=document.createElement("p");
         const priceProduct=document.createElement("p");
         const editBtn = document.createElement("button");
         
-        col.classList.add("col", "mt-5");
+        col.classList.add("col-12","col-sm-6", "col-md-4", "col-lg-3", "mt-5");
         card.classList.add("card", "border", "border-light","bg-dark");
         imageProduct.classList.add("card-img-top", "img-fluid", "object-fit-cover");
         cardBody.classList.add("card-body");
@@ -41,6 +41,8 @@ fetch(URL, {
         editBtn.classList.add("btn", "btn-outline-warning");
 
         imageProduct.src=element.imageUrl;
+        imageProduct.style.height = "250px";
+        imageProduct.style.width = "100%";
         nameProduct.textContent=element.name;
         priceProduct.textContent=`${element.price} €`;
         editBtn.textContent="edit"
@@ -50,18 +52,18 @@ fetch(URL, {
         col.appendChild(card);
         row.appendChild(col);
 
-        editBtn.addEventListener("click", (e)=>{
+        card.addEventListener("click", (e)=>{
+
             e.preventDefault();
-            window.location.href="./index.html"
-            // window.location.href = "./index.html",
+            window.location.href=`./details.html?id=${element._id}`
         })
+        editBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          window.location.href = `./index.html?id=${element._id}`;
+        });
     });
 })
 .catch(error => {
     console.error("cè stato un errore nella chiamata", error);
 })
-// <div class="card">
-// <img src="..." class="card-img-top img-fluid object-fit-cover" style="height:250px; width: 100%; "alt="product" />
-// <div class="card-body">
-//   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-// </div>
