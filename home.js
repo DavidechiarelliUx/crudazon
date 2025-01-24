@@ -32,7 +32,7 @@ fetch(URL, {
         const priceProduct=document.createElement("p");
         const editBtn = document.createElement("button");
         
-        col.classList.add("col-12","col-sm-6", "col-md-4", "col-lg-3", "mt-5");
+        col.classList.add("col-12","col-sm-6", "col-md-6", "col-lg-4","col-xxl-3", "mt-5");
         card.classList.add("card", "border", "border-light","bg-dark");
         imageProduct.classList.add("card-img-top", "img-fluid", "object-fit-cover");
         cardBody.classList.add("card-body");
