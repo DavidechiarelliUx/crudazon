@@ -141,3 +141,18 @@ if (productId) {
   };
 }
 
+const resetBtn = document.getElementById("reset-btn");
+
+resetBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const userConfirmed = confirm("Sei sicuro di voler resettare il form?");
+
+  if (userConfirmed) {
+    // Se confermato, resetta il form
+    const formBackOffice = document.getElementById("back-officeForm");
+    formBackOffice.reset(); // Metodo predefinito per resettare il form
+    console.log("Form resettato.");
+  } else {
+    console.log("Reset del form annullato dall'utente.");
+  }
+});

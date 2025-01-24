@@ -67,3 +67,15 @@ fetch(URL, {
 .catch(error => {
     console.error("cè stato un errore nella chiamata", error);
 })
+.finally(()=> {
+    isLoading(false);
+})
+
+const isLoading = function (loadingState) {
+  const spinner = document.querySelector(".spinner-border");
+  if (loadingState) {
+    spinner.classList.remove("d-none");
+  } else {
+    spinner.classList.add("d-none");
+  }
+};
